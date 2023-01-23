@@ -1,6 +1,6 @@
 public class WordBank {
 
-    private String[] words = {"Aardvark",
+    private final String[] words = {"Aardvark",
             "Albatross",
             "Alligator",
             "Alpaca",
@@ -224,6 +224,7 @@ public class WordBank {
             "Wren",
             "Yak",
             "Zebra"};
+
 
     public String getRandomWord() {
         int randomWordIndex = (int) (Math.random() * words.length);

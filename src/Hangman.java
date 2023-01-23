@@ -1,12 +1,8 @@
-
-
-
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Main {
+public class Hangman {
     public static void main(String[] args) {
 
         WordBank wordBank = new WordBank();
@@ -27,7 +23,7 @@ public class Main {
                 System.out.println("That ain't right captain. Please enter a letter.");
                 continue;
             } else if (guesses.contains(guess)) {
-                System.out.println("DU'H! You already guessed that letter. PLease enter a new letter.");
+                System.out.println("DUH! You already guessed that letter. PLease enter a new letter.");
                 continue;
             }
             guesses.add(guess);
@@ -55,8 +51,7 @@ public class Main {
             System.out.println("Fancy another go? (yes/no)");
             Scanner SCANNER = new Scanner(System.in);
             String playAgainInput = SCANNER.nextLine();
-            if (playAgainInput.toLowerCase().equals("yes")) {
-                playAgain = true;
+            if (playAgainInput.equalsIgnoreCase("yes")) {
                 word = wordBank.getRandomWord();
                 guesses.clear();
                 lives = 8;
@@ -65,13 +60,6 @@ public class Main {
                 System.out.println("Thanks for playing.");
             }
         }
-
-
-
-
-
-
-
 
     }
 }
