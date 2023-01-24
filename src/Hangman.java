@@ -9,7 +9,7 @@ public class Hangman {
         Display display = new Display();
         PlayerInteraction playerInteraction = new PlayerInteraction();
 
-        System.out.println("Welcome to Hangman. Guess the animal or hang!");
+        System.out.println("Welcome to Hangman: Animal. Guess the animal or hang!");
         String word = wordBank.getRandomWord();
         ArrayList<Character> guesses = new ArrayList<>();
         int lives = 8;

@@ -5,8 +5,7 @@ public class Display {
     public boolean displayWord (String word, ArrayList<Character> guesses) {
         boolean guessed = true;
         for (int i = 0; i < word.length(); i++) {
-            if (guesses.contains(Character.toLowerCase(word.charAt(i))) ||
-                    guesses.contains(Character.toUpperCase(word.charAt(i)))) {
+            if (guesses.contains(Character.toLowerCase(word.charAt(i)))) {
                 System.out.println(word.charAt(i) + " ");
             } else {
                 guessed = false;
@@ -29,4 +28,6 @@ public class Display {
     public void displayLives(int lives) {
         System.out.println("Lives: " + lives);
     }
+
+
 }
